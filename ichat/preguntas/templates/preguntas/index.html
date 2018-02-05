@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Preguntas {% endblock %}
+{% block content %}
+    <a href="{% url "pregunta_crear" %}"><h3 style = "color:#0000CC">[Crear una pregunta]</h3></a>
+        {% for pregunta in preguntas %}
+            <b> Pregunta:</b> <a href="{% url "pregunta_detalle" pregunta.id %}"> <b>{{ pregunta.pregunta }}</b> </a><b>&nbsp;&nbsp</b><a href="/pregunta_borrar/{{pregunta.id}}"><b>Borrar</b></a><br/>
+	    <b "leftmargin = 30px">Respuesta:</b> <a href="{% url "pregunta_detalle" pregunta.id %}"> <b>{{ pregunta.respuesta }}</b> </a><br/>
+	    <p></p>
+{% endfor %}
+    <p>------------------------------------------------------</p>
+    <h2 style = "color:orange">¡Si estás seguro de tus preguntas y respuestas puedes entrenar el chat!</h2>
+    <img src="/static/bot/css/images/flecha.gif" height="72" width="72"/><a href="{% url "entrenar" %}"><h2 style = "color:white">[Entrenar modelo]</h2></a>
+{% endblock %}
+
+
+
+
+        

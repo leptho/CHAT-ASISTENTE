@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %} Crear una pregunta {% endblock %}
+{% block content %}
+    <form action="" method="post">{% csrf_token %}
+    {% include "preguntas/form_snippets.html"%}
+    <input type="submit" value="Crear pregunta" />
+    </form>
+<a href="{% url "preguntas" %}"><h3>[Regresar a la lista de preguntas]</h3></a>
+{% endblock %}

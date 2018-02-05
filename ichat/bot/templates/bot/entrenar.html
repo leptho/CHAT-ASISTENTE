@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %} Preguntas {% endblock %}
+{% block content %}    
+        {% for pregunta in preguntas %}
+            <b>Pregunta:</b> {{ pregunta.pregunta }}<br/>
+	    <b>Respuesta:</b> {{ pregunta.respuesta }} <br/>
+	    <p></p>	
+{% endfor %}
+	<h3 style = "color:white">¡Se ha realizado el entrenamiento con éxito!</h3> 
+	<a href="{% url "bot" %}"><h3>[Probar Mi Bot]</h3></a>
+	<a href="{% url "preguntas" %}"><h3>[Seguir editando preguntas]</h3></a>
+{% endblock %}
+
+
+
+
+        

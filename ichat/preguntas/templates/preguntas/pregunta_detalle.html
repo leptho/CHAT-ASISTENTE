@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %} Pregunta detalle {% endblock %}
+{% block content %}
+    <h3 style = "color:white">Pregunta:</p></h3>
+    <h2>{{pregunta.pregunta}}?</h2>    
+    <h3 style = "color:white">Respuesta:</h3>
+    <h2>
+    {% if pregunta.respuesta %}
+        {{pregunta.respuesta}}
+    {% else %}
+        No se ha incluido respuesta
+    {% endif %}
+    </h2>
+<p>------------------------------------------------------</p>
+<p><a href="{% url "pregunta_editar" pregunta.id %}"><h2>[Editar esta pregunta]</h2></a></p>
+<p><a href="{% url "preguntas" %}"><h2>[Regresar a preguntas]</h2></a></p>   
+{% endblock %}
+
+
+
+
+
+
+
+
+

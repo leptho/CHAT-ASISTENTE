@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Agenda inteligente | {% block title %}Inicio{% endblock %}</title>
+</head>
+<body style="font-family: Arial" topmargin="20" leftmargin="20" background="/static/bot/css/images/fondo_base.jpg">
+    <div id="header">
+	<table class="tbl">
+	  <tr>
+	    <td><IMG SRC="/static/bot/css/images/engrane.png" WIDTH=60 HEIGHT=60></td>
+	    <td><h1 style = "color:#99FF33">Agenda inteligente</h1></td>
+	  </tr>
+	</table>
+    </div>
+    <div>
+         <h2 style = "color:#99FF33">Lista de preguntas para entrenar el chat de la Agenda inteligente</h2>
+	 <p>------------------------------------------------------</p>
+    </div>
+    <div id="content">
+        {% block content %}{% endblock%}
+    </div>
+</body>
+</html>
